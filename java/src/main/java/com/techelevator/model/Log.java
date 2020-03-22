@@ -7,14 +7,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class Log {
 	
-	private List<Transaction> transactions;
+	private Queue<Transaction> transactions;
 
 	public Log() {
-		transactions = new ArrayList<Transaction>();
+		transactions = new LinkedList<Transaction>();
 	}
 	
 	public void addDepositTransaction(BigDecimal amountDeposited, BigDecimal currentBalance) {
@@ -42,8 +44,8 @@ public class Log {
 		}
 		// append transactions to running log file
 		try (PrintWriter logWriter = new PrintWriter(new FileOutputStream(logFile, true))) {
-			for (Transaction t : transactions) {
-				logWriter.println(t.toString());
+			while (transactions.peek() != null) {
+				logWriter.println(transactions.remove());
 			}
 		} catch (FileNotFoundException e) {
 			System.out.println("Couldn't print to the log file.");
