@@ -1,6 +1,6 @@
 # TE-Mod1Capstone-VendingMachineCLI
 
-[![Run on Repl.it](https://repl.it/badge/github/aauel/TE-Mod1Capstone-VendingMachineCLI)](https://repl.it/github/aauel/TE-Mod1Capstone-VendingMachineCLI)
+[![Run on Repl.it](https://repl.it/badge/github/aauel/TE-Mod1Capstone-VendingMachineCLI)](https://vendingmachinecli.aauel.repl.run/)
 
 ### Vending Machine Software
 You’ve been asked to develop an application for the newest vending machine distributor, Umbrella Corp. They’ve released a new vending machine (Vendo-Matic 600) that is integrated with everyone’s bank accounts allowing customers to purchase products right from their computers for convenience sake. 
